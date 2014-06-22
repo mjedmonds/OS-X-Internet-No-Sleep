@@ -6,14 +6,7 @@ This is a launch daemon that will prevent OS X from sleeping during internet use
 Installation
 --------------
 
-The main script, netmonitor.sh, relies on the following:
-
-1) netstat (should be installed already)
-
-2) gtimeout (a part of coretutils)
-
-Steps
---------------
+The main script, netmonitor.sh, relies on the netstat and gtimeout (a part of coreutils)
 
 1) Make sure coreutils is installed
 
