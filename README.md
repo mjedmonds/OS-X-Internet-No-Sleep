@@ -6,32 +6,26 @@ This is a launch daemon that will prevent OS X from sleeping during internet use
 Installation
 --------------
 
-The main script, netmonitor.sh, relies on the netstat and gtimeout (a part of coreutils)
+1) Place netmonitor.sh in the following directory
 
-1) Make sure coreutils is installed
-
-	brew install coreutils
-
-2) Place netmonitor.sh in the following directory
-
-	/usr/local/bin/netmonitor.sh
+	/usr/local/bin/netmonitor.py
 
 Note: permissions should be 774
 
-3) Place com.markedmonds.netmonitor.plist in the following directory:
+2) Place com.markedmonds.netmonitor.plist in the following directory:
 
 	/Library/LaunchDaemons/com.markedmonds.netmonitor.plist
 
 Note: permissions should be 644 and root should be the owner
 
-4) Run the following commands to tell launchd to run the new script
+3) Run the following commands to tell launchd to run the new script
 
 	sudo launchctl load -w /Library/LaunchDaemons/com.markedmonds.netmonitor.plist
 
 Configuration
 --------------
 
-The script can be modified to have higher or lower thresholds. The default is set to 60KB after sampling for a period of 10 seconds. The script sets the computer to sleep after 20 minutes if the threshold is not met. The pmset command can be changed to include all power management configurations (such as battery and AC, or just battery). The scripts defaults to only disabling sleep while connected to AC power. All of these values can be adjusted in netmonitor.sh.
+The script can be modified to have higher or lower thresholds. The default is set to 60KB after sampling for a period of 10 seconds. The script sets the computer to sleep after 20 minutes if the threshold is not met. The pmset command can be changed to include all power management configurations (such as battery and AC, or just battery). The scripts defaults to only disabling sleep while connected to AC power. All of these values can be adjusted in netmonitor.py.
 
 The launch daemon plist is set to run every 30 minutes (3600 seconds). This too can be adjusted.
 
