@@ -6,7 +6,7 @@ This is a launch daemon that will prevent OS X from sleeping during internet use
 Installation
 --------------
 
-1) Place netmonitor.sh in the following directory
+1) Place netmonitor.py in the following directory
 
 	/usr/local/bin/netmonitor.py
 
