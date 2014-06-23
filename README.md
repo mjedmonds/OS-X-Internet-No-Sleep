@@ -1,7 +1,7 @@
 Sleep prevention during Internet use
 ==============
 
-This is a launch daemon that will prevent OS X from sleeping during internet use. In Mavericks, OS X will sleep the machine without regard to the current internet usage (rather annoying if you are uploading/downloading a large file). The launchd daemon is used to set the sleep parameter of pmset based on a sample of the current internet traffic. The default configuration only prevents sleep while connected to AC power. The script is launch every 30 minutes to check the current internet usage.
+This is a launch daemon that will prevent OS X from sleeping during internet use. In Mavericks, OS X will sleep the machine without regard to the current internet usage (rather annoying if you are uploading/downloading a large file). The launchd daemon is used to set the sleep parameter of pmset based on a sample of the current internet traffic. The default configuration only prevents sleep while connected to AC power. The script is launched every 30 minutes to check the current internet usage.
 
 Installation
 --------------
