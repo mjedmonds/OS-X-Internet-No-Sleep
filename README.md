@@ -22,8 +22,6 @@ Note: permissions should be 644 and root should be the owner
 
 	sudo launchctl load -w /Library/LaunchDaemons/com.markedmonds.netmonitor.plist
 
-Symlinks can be used in place of manual placement if you would like to clone the repo somewhere.
-
 Configuration
 --------------
 

@@ -5,7 +5,7 @@
 #   https://code.google.com/p/psutil/source/browse/examples/nettop.py?name=release-0.6.0
 #
 
-import psutil, time, subprocess
+import psutil, time, subprocess, datetime
 
 threshold = 60000       #threshold in bytes
 sampleTime = 10         #amount of time to sample
@@ -23,8 +23,10 @@ def main():
     tot_diff = sent_diff + recv_diff
     if(tot_diff > threshold):
         subprocess.Popen(['sudo','/usr/bin/pmset','-c','0'])
+        print "%s:\t:bytes read=%i:\t:sleep disabled" % (datetime.datetime.now(),tot_diff) 
     else:
         subprocess.Popen(['sudo','/usr/bin/pmset','-c','20'])
+        print "%s:\t:bytes read=%i:\t:sleep enabled" % (datetime.datetime.now(),tot_diff) 
 
 if __name__ == '__main__':
     main()
