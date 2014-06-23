@@ -5,19 +5,17 @@
      <key>Label</key>
      <string>com.markedmonds.netmonitor</string>
  
-     <key>ProgramArguments</key>
-     <array>
-          <string>/usr/local/bin/netmonitor.py</string>
-     </array>
- 	  
+     <key>Program</key>
+     <string>/usr/local/bin/netmonitor.py</string>
+
      <key>StandardErrorPath</key>
      <string>/var/log/com.markedmonds.netmonitor.log</string>
      
      <key>StandardOutPath</key>
      <string>/var/log/com.markedmonds.netmonitor.log</string>
 	  
-	  <key>RunAtLoad</key>
-	  <true/>
+     <key>RunAtLoad</key>
+     <true/>
  
      <key>StartInterval</key>
      <integer>1800</integer>

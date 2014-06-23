@@ -22,12 +22,14 @@ Note: permissions should be 644 and root should be the owner
 
 	sudo launchctl load -w /Library/LaunchDaemons/com.markedmonds.netmonitor.plist
 
+Symlinks can be used in place of manual placement if you would like to clone the repo somewhere.
+
 Configuration
 --------------
 
 The script can be modified to have higher or lower thresholds. The default is set to 60KB after sampling for a period of 10 seconds. The script sets the computer to sleep after 20 minutes if the threshold is not met. The pmset command can be changed to include all power management configurations (such as battery and AC, or just battery). The scripts defaults to only disabling sleep while connected to AC power. All of these values can be adjusted in netmonitor.py.
 
-The launch daemon plist is set to run every 30 minutes (3600 seconds). This too can be adjusted.
+The launch daemon plist is set to run every 30 minutes (1800 seconds). This too can be adjusted.
 
 Should you adjust any values in the plist, you need to reload the launch daemon with launchctl:
 

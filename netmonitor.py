@@ -18,8 +18,8 @@ def poll(interval):
 
 def main():
     (tot_before, tot_after) = poll(sampleTime)
-    sent_diff = tot_after.bytes_sent-tot_before.bytes_sent
-    recv_diff = tot_after.bytes_recv-tot_before.bytes_recv
+    sent_diff = tot_after.bytes_sent - tot_before.bytes_sent
+    recv_diff = tot_after.bytes_recv - tot_before.bytes_recv
     tot_diff = sent_diff + recv_diff
     if(tot_diff > threshold):
         subprocess.Popen(['sudo','/usr/bin/pmset','-c','0'])
