@@ -24,7 +24,7 @@ def main():
     if(tot_diff > threshold):
         subprocess.Popen(['sudo','/usr/bin/pmset','-c','0'])
     else:
-        subprocess.Popen(['sudo','/usr/bin/pmset','-c','0'])
+        subprocess.Popen(['sudo','/usr/bin/pmset','-c','20'])
 
 if __name__ == '__main__':
     main()
