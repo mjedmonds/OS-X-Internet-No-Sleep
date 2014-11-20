@@ -8,8 +8,8 @@
 
 import psutil, time, subprocess, datetime, sys
 
-threshold = 150000      #threshold in bytes
-sampleTime = 10         #amount of time to sample
+threshold = 1000000      #threshold in bytes
+sampleTime = 100         #amount of time to sample
 
 def poll(interval):
     tot_before = psutil.network_io_counters()
