@@ -6,21 +6,27 @@ This is a launch daemon that will prevent OS X from sleeping during internet use
 Installation
 --------------
 
-1) Place netmonitor.py in the following directory
+1) Place ```netmonitor.py``` in the following directory
 
-	/usr/local/bin/netmonitor.py
+```
+/usr/local/bin/netmonitor.py
+```
 
-Note: permissions should be 774
+Note: permissions should be ```774```
 
-2) Place com.markedmonds.netmonitor.plist in the following directory:
+2) Place ```com.mjedmonds.netmonitor.plist``` in the following directory:
 
-	/Library/LaunchDaemons/com.markedmonds.netmonitor.plist
+```
+/Library/LaunchDaemons/com.mjedmonds.netmonitor.plist
+```
 
-Note: permissions should be 644 and root should be the owner
+Note: permissions should be ```644``` and ```root``` should be the owner
 
 3) Run the following commands to tell launchd to run the new script
 
-	sudo launchctl load -w /Library/LaunchDaemons/com.markedmonds.netmonitor.plist
+```
+sudo launchctl load -w /Library/LaunchDaemons/com.mjedmonds.netmonitor.plist
+```
 
 Configuration
 --------------
@@ -31,6 +37,7 @@ The launch daemon plist is set to run every 30 minutes (1800 seconds). This too 
 
 Should you adjust any values in the plist, you need to reload the launch daemon with launchctl:
 
-	sudo launchctl unload -w /Library/LaunchDaemons/com.markedmonds.netmonitor.plist
-
-	sudo launchctl load -w /Library/LaunchDaemons/com.markedmonds.netmonitor.plist
+```
+sudo launchctl unload -w /Library/LaunchDaemons/com.mjedmonds.netmonitor.plist
+sudo launchctl load -w /Library/LaunchDaemons/com.mjedmonds.netmonitor.plist
+```
