@@ -9,10 +9,10 @@
      <string>/usr/local/bin/netmonitor.py</string>
 
      <key>StandardErrorPath</key>
-     <string>/var/log/com.markedmonds.netmonitor.log</string>
+     <string>/var/log/com.mjedmonds.netmonitor.log</string>
      
      <key>StandardOutPath</key>
-     <string>/var/log/com.markedmonds.netmonitor.log</string>
+     <string>/var/log/com.mjedmonds.netmonitor.log</string>
 	  
      <key>RunAtLoad</key>
      <true/>
